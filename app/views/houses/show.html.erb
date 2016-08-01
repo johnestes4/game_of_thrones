@@ -1,0 +1,19 @@
+<h2>
+  <%= @house.name %>
+  <%= link_to "(edit)", edit_house_path(@house) %>
+</h2>
+
+<img class='house-sigil' src="<%= @house.sigil_url %>">
+
+<h3>Members</h3>
+
+<ul>
+  <% @house.characters.each do |character| %>
+    <!-- build the list element for each song -->
+    <li>
+        <%= link_to "#{character.name}", character_path%>
+        <img class='character-photo' src="<%= character.photo_url%>">"
+    </li>
+
+  <% end %>
+</ul>

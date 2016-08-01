@@ -1,0 +1,5 @@
+<li>
+    <%= link_to house.name, house %> | <%= link_to 'Delete', house_path(house),
+                                            method: :delete,
+                                            data: { confirm: 'Are you sure?' } %>
+</li>

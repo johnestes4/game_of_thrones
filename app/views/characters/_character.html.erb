@@ -1,0 +1,5 @@
+<div class="character">
+    <%= link_to character.name, character %> | <%= link_to 'Delete', character_path(character),
+                                            method: :delete,
+                                            data: { confirm: 'Are you sure?' } %>
+</div>

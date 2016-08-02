@@ -1,0 +1,8 @@
+<div class = "character">
+    <h2><%= link_to "#{@character.name}", character_path%></h2><br>
+    <h3><img class="tiny-sigil" src="<%= @character.house.sigil_url %>"> <%= link_to "House #{@character.house.name}", @character.house %> <img class="tiny-sigil" src="<%= @character.house.sigil_url %>"></h3>
+
+    <img class='character-photo' src="<%= @character.photo_url%>"><br>
+    <p>Status: <%= @character.status %></p>
+    <p><%= link_to "(edit)", edit_character_path(@character) %></p>
+</div>

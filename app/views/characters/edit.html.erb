@@ -1,0 +1,7 @@
+<h2>Edit <%= @character.name %></h2>
+
+<%= render 'form' %>
+
+<p><%= link_to "Delete #{@character.name}", character_path(@character),
+method: :delete,
+data: {confirm: "Are you sure you want to delete #{@character.name}?"} %></p>

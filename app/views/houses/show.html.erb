@@ -1,5 +1,5 @@
 <h2>
-  <%= @house.name %>
+  House <%= @house.name %>
   <%= link_to "(edit)", edit_house_path(@house) %>
 </h2>
 
@@ -7,13 +7,13 @@
 
 <h3>Members</h3>
 
-<ul>
   <% @house.characters.each do |character| %>
     <!-- build the list element for each song -->
-    <li>
-        <%= link_to "#{character.name}", character_path%>
-        <img class='character-photo' src="<%= character.photo_url%>">"
-    </li>
+    <div class = "character">
+        <h2><%= link_to "#{character.name}", character%><h2><br>
+        <img class='character-photo' src="<%= character.photo_url%>"><br>
+        <p>Status: <%= character.status %></p>
+    </div>
 
   <% end %>
-</ul>
+<h3><%= link_to "New Character", new_character_path %></h3>

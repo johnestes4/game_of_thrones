@@ -1,0 +1,5 @@
+<h2>Edit <%= @house.name %></h2>
+
+<%= render 'form' %>
+
+<%= link_to "Delete House #{@house.name}", house_path(@house), method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -1,0 +1,19 @@
+<% @character.errors.full_messages.each do |message| %>
+  <p class="flash alert"><%= message %></p>
+<% end %>
+
+<%= form_for @character do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :photo_url %>
+  <%= f.text_field :photo_url %>
+
+  <%= f.label :status %>
+  <%= f.text_field :status %>
+
+  <%= f.label :house_id %>
+  <%= f.collection_select(:house_id, House.all, :id, :name, prompt: true) %>
+
+  <%= f.submit %>
+<% end %>

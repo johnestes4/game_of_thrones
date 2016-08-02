@@ -1,0 +1,13 @@
+<% @house.errors.full_messages.each do |message| %>
+  <p class="flash alert"><%= message %></p>
+<% end %>
+
+<%= form_for @house do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label "Sigil URL" %>
+  <%= f.text_field :sigil_url %>
+
+  <%= f.submit %>
+<% end %>

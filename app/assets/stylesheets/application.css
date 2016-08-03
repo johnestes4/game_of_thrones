@@ -15,12 +15,36 @@
  */
 body {
   text-align: center;
+  font-family: 'Roboto', sans-serif;
   background-color: rgb(240, 240, 240);
+  color: rgb(50, 50, 50)
+}
+a {
+  text-decoration: none;
+  color: rgb(75, 75, 250);
+}
+a:hover {
+  text-decoration: none;
+  color: rgb(0, 0, 255);
+  font-weight: bold;
+}
 
+
+.container {
+  width: 100%;
+}
+.house {
+  display: inline-block;
+  border-radius: 5%;
+  margin: 0 auto;
+  margin-bottom: 2%;
+  width: 25%;
+  text-align: center;
+  background-color: rgba(100, 100, 100, 0.75);
 }
 .character {
-  border: 10px black solid;
-  border-radius: 10%;
+  border: 5px rgb(150, 150, 150) solid;
+  border-radius: 5%;
   margin: 0 auto;
   margin-bottom: 2%;
   width: 60%;

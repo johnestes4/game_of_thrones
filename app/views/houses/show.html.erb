@@ -10,7 +10,7 @@
   <% @house.characters.each do |character| %>
     <!-- build the list element for each song -->
     <div class = "character">
-        <h2><%= link_to "#{character.name}", character%><h2><br>
+        <h2><%= link_to "#{character.name}", character%></h2><br>
         <img class='character-photo' src="<%= character.photo_url%>"><br>
         <p>Status: <%= character.status %></p>
     </div>
